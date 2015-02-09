@@ -1,0 +1,10 @@
+{
+	"name": "example.org",
+	"address": "127.0.0.1",
+	"users": [
+		{
+			"name": "testuser",
+			"sudo": true
+		}
+	]
+}

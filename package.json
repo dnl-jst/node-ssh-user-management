@@ -1,0 +1,16 @@
+{
+  "name": "node-ssh-user-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Jost <dnl.jst@gmail.com> (https://github.com/dnl-jst)",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "nodemiral": "^0.3.11",
+    "trim": "0.0.1"
+  }
+}
