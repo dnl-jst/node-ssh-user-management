@@ -42,7 +42,7 @@ for (var i = 0; i < files.length; i++) {
 
             var session = nodemiral.session(config.address, {username: 'root', pem: SSH_PRIVATE_KEY});
 
-            session.executeScript(path.resolve(__dirname, 'scripts/') + '/handle_user.sh', {username: username, sudo: sudo, publicKey: publicKey}, function(err, code, logs) {
+            session.executeScript(path.resolve(__dirname, 'scripts/') + '/handle_user.sh', { vars: { username: username, sudo: sudo, publicKey: publicKey } }, function(err, code, logs) {
                 console.log('[' + config.name + '] user: ' + username + ', sudo: ' + sudo + ', output: ' + chalk.green(trim(logs.stdout)));
             });
 

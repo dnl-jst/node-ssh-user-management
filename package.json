@@ -10,8 +10,8 @@
   "author": "Daniel Jost <dnl.jst@gmail.com> (https://github.com/dnl-jst)",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^0.5.1",
-    "nodemiral": "^0.3.11",
+    "chalk": "^1.1.3",
+    "nodemiral": "^1.1.1",
     "trim": "0.0.1"
   }
 }
