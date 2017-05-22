@@ -36,17 +36,17 @@ for (var i = 0; i < files.length; i++) {
             continue;
         }
 
-        privateKey = fs.readFileSync(keyPath);
+        publicKey = fs.readFileSync(keyPath);
 
-        (function(config, username, sudo, privateKey) {
+        (function(config, username, sudo, publicKey) {
 
             var session = nodemiral.session(config.address, {username: 'root', pem: SSH_PRIVATE_KEY});
 
-            session.executeScript(path.resolve(__dirname, 'scripts/') + '/handle_user.sh', {username: username, sudo: sudo, private_key: privateKey}, function(err, code, logs) {
+            session.executeScript(path.resolve(__dirname, 'scripts/') + '/handle_user.sh', {username: username, sudo: sudo, publicKey: publicKey}, function(err, code, logs) {
                 console.log('[' + config.name + '] user: ' + username + ', sudo: ' + sudo + ', output: ' + chalk.green(trim(logs.stdout)));
             });
 
-        })(config, username, sudo, privateKey);
+        })(config, username, sudo, publicKey);
 
     }
 

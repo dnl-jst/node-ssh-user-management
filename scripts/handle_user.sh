@@ -9,6 +9,6 @@ usermod -a -G sudo "<%= username %>"
 <% } %>
 
 mkdir -p /home/<%= username %>/.ssh/
-echo "<%= private_key %>" > /home/<%= username %>/.ssh/authorized_keys
+echo "<%= publicKey %>" > /home/<%= username %>/.ssh/authorized_keys
 
 echo "processing finished"
